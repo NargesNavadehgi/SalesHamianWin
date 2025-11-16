@@ -145,7 +145,7 @@ BEGIN TRY
         CustCtgrName,
 		(SELECT TOP 1 ID FROM SLE.tblCustCtgrSle WHERE [CustCtgrName] = s.CustCtgrName) as CustCtgrRef,
 		(SELECT TOP 1 ID FROM [GNR].[tblCustAct] WHERE [CustActName] = s.CustActName) as  [CustActRef],
-		(SELECT TOP 1 ID FROM [GNR].[tblArea] WHERE LTRIM(RTRIM([AreaName])) = LTRIM(RTRIM(s.AreaName))) as  [AreaRef], -- 🆕 اصلاح تابع TRIM
+		(SELECT TOP 1 ID FROM [GNR].[tblArea] WHERE LTRIM(RTRIM([AreaName])) = LTRIM(RTRIM(s.AreaName))) as  [AreaRef], 
         CustActName,
         CustLevelName
     FROM [Hamian].dbo.Customers S
