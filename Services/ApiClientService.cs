@@ -74,7 +74,7 @@ namespace SalesHamianWin.Services
         };
 
                 var queryString = string.Join("&", parameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
-                var fullUrl = $"http://87.107.28.117:9096/api/ThirdPartySaleDetailAPI/GetSaleVoucherReturnInfoDetail?{queryString}";
+                var fullUrl = $"http://xx/api/ThirdPartySaleDetailAPI/GetSaleVoucherReturnInfoDetail?{queryString}";
 
                 var response = await _httpClient.GetAsync(fullUrl);
                 response.EnsureSuccessStatusCode();
