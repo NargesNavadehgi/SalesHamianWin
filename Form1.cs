@@ -30,12 +30,8 @@ namespace SalesHamianWin
             InitializeComponent();
             InitializeModernUI();
 
-            // دو Connection String مختلف
-            //_sourceConnectionString = @"Server=10.0.0.44\biinstance;Database=Hamian;User ID=sa;Password=123456";
-            //_targetConnectionString = @"Server=10.0.0.44\biinstance;Database=DSDB_HPNI;User ID=sa;Password=123456";
-
-            _sourceConnectionString = @"Server=localhost;Database=Hamian;User ID=hpni;Password=hpni";
-            _targetConnectionString = @"Server=localhost;Database=DSDB_HPNI;User ID=hpni;Password=hpni";
+            _sourceConnectionString = @"Server=xx;Database=xx;User ID=xx;Password=xx";
+            _targetConnectionString = @"Server=xx;Database=xx;User ID=xx;Password=xx";
             _httpClient = new HttpClient();
             _apiService = new ApiClientService(_httpClient);
             _dataService = new DataService(_sourceConnectionString, _targetConnectionString);
