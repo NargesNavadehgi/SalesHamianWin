@@ -10,7 +10,7 @@
 //    public partial class Form1 : Form
 //    {
  
-//        private readonly string _connectionString = @"Server=10.0.0.44\biinstance;Database=Hamian;User ID=sa;Password=123456";
+//        private readonly string _connectionString = @"Server=xx;Database=xx;User ID=xx;Password=xx";
 
 //        public Form1()
 //        {
@@ -27,8 +27,8 @@
 //                {
 //                    { "fromDate", textBox1.Text },
 //                    { "toDate", textBox2.Text },
-//                    { "userId", "543" },
-//                    { "appUserName", "parshayan" }
+//                    { "userId", "xx" },
+//                    { "appUserName", "xx" }
 //                };
 
 //                var apiData = await _apiService.GetSaleInfoDetails(parameters);
