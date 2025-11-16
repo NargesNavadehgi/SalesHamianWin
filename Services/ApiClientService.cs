@@ -13,7 +13,7 @@ namespace SalesHamianWin.Services
     public class ApiClientService
     {
         private readonly HttpClient _httpClient;
-        private const string BaseUrl = "http://87.107.28.117:9096/api/ThirdPartySaleInfoDetailAPI/GetSaleInfoDetails";
+        private const string BaseUrl = "http://xx/api/ThirdPartySaleInfoDetailAPI/GetSaleInfoDetails";
 
         public ApiClientService(HttpClient httpClient)
         {
@@ -25,14 +25,14 @@ namespace SalesHamianWin.Services
             try
             {
                 // اصلاح URL - حذف اسلاش اضافه
-                const string BaseUrl = "http://87.107.28.117:9096/api/ThirdPartySaleInfoDetailAPI/GetSaleInfoDetails";
+                const string BaseUrl = "http://xx/api/ThirdPartySaleInfoDetailAPI/GetSaleInfoDetails";
 
                 var parameters = new Dictionary<string, string>
         {
             { "fromDate", fromDate },
             { "toDate", toDate },
-            { "userId", "570000013" },  // ✅ از userId استفاده کنید (مطابق curl)
-            { "appUserName", "HPNI" }   // ✅ مقدار واقعی به جای null
+            { "userId", "xx" },  
+            { "appUserName", "xx" }   
         };
 
                 var queryString = string.Join("&", parameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
@@ -95,12 +95,12 @@ namespace SalesHamianWin.Services
     {
         { "fromDate", fromDate },
         { "toDate", toDate },
-        { "appuserId", "570000013" },
-        { "appUserName", "HPNI" }
+        { "appuserId", "xx" },
+        { "appUserName", "xx" }
     };
 
             var queryString = string.Join("&", parameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
-            var fullUrl = $"http://87.107.28.117:9096/api/ThirdPartyCustomerAPI/GetCustomersInfoDetail?{queryString}";
+            var fullUrl = $"http://xx/api/ThirdPartyCustomerAPI/GetCustomersInfoDetail?{queryString}";
 
             var response = await _httpClient.GetAsync(fullUrl);
             response.EnsureSuccessStatusCode();
