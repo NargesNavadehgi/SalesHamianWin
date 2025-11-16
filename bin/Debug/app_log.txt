@@ -1,0 +1,41 @@
+8/3/2025 1:31:38 PM: خطا: خطا در دریافت داده از API: A task was canceled.
+8/3/2025 1:53:04 PM: خطا: خطا در دریافت داده از API: A task was canceled.
+8/3/2025 3:11:48 PM: خطا: خطا در دریافت داده از API: A task was canceled.
+8/23/2025 4:48:20 PM: خطا: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+جزئیات: String or binary data would be truncated.
+8/25/2025 8:16:54 AM: خطا: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+جزئیات: String or binary data would be truncated.
+8/25/2025 8:46:51 AM: خطا: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+جزئیات: String or binary data would be truncated.
+8/25/2025 8:57:10 AM: خطا: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+جزئیات: String or binary data would be truncated.
+8/25/2025 9:12:39 AM: خطا: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+جزئیات: String or binary data would be truncated.
+8/25/2025 9:13:32 AM: خطا: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+جزئیات: String or binary data would be truncated.
+8/25/2025 9:15:24 AM: خطا: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+جزئیات: String or binary data would be truncated.
+8/25/2025 9:16:18 AM: خطا: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+جزئیات: String or binary data would be truncated.
+9/21/2025 4:38:57 PM: خطا: خطا در دریافت داده از API: A task was canceled.
+9/21/2025 4:41:15 PM: خطا: خطا در دریافت داده از API: A task was canceled.
+10/20/2025 1:10:12 PM: خطا: خطا در دریافت داده از API: A task was canceled.
+10/22/2025 11:08:58 AM: خطا: Cannot open database "Hamian" requested by the login. The login failed.
+Login failed for user 'sa'.
+10/22/2025 11:36:56 AM: خطا: خطا در دریافت داده از API: A task was canceled.
+10/22/2025 11:37:35 AM: خطا: Cannot access destination table 'dbo.Sale'.
+جزئیات: Invalid object name 'dbo.Sale'.
+10/22/2025 11:45:39 AM: خطا: خطا در دریافت داده از API: Response status code does not indicate success: 400 (Bad Request).
+10/22/2025 11:45:51 AM: خطا: خطا در دریافت داده از API: Response status code does not indicate success: 400 (Bad Request).
+10/22/2025 11:52:36 AM: خطا: خطا در دریافت داده از API: Response status code does not indicate success: 400 (Bad Request).
+10/22/2025 11:57:58 AM: خطا: خطا در دریافت داده از API: Response status code does not indicate success: 400 (Bad Request).
+10/22/2025 11:59:53 AM: خطا: HTTP error: Response status code does not indicate success: 400 (Bad Request).
+10/22/2025 12:01:10 PM: خطا: HTTP error: Response status code does not indicate success: 400 (Bad Request).
+10/22/2025 12:07:23 PM: خطا: خطا در دریافت داده از API: Response status code does not indicate success: 400 (Bad Request).
+10/22/2025 12:08:05 PM: خطا: HTTP Error: 400 - {"Message":"شناسه کاربری معتبر نمی باشد."}
+10/22/2025 12:40:44 PM: خطا: HTTP Error: 400 - {"Message":"شناسه کاربری معتبر نمی باشد."}
+10/22/2025 12:42:11 PM: خطا: HTTP Error: 400 - {"Message":"شناسه کاربری معتبر نمی باشد."}
+10/22/2025 12:50:00 PM: خطا: HTTP Error: 400 - {"Message":"شناسه کاربری معتبر نمی باشد."}
+10/22/2025 12:54:35 PM: خطا: HTTP Error: 400 - {"Message":"شناسه کاربری معتبر نمی باشد."}
+10/22/2025 12:57:30 PM: خطا: HTTP Error: 404 - {"Message":"No HTTP resource was found that matches the request URI 'http://87.107.28.117:9096/api/ThirdPartySaleInfoDetailAPI/GetSaleInfoDetails?fromDate=1404%2F07%2F01&toDate=1404%2F07%2F30&appuserId=570000013&appUserName=HPNI'."}
+10/22/2025 1:00:31 PM: خطا: هیچ یک از endpointهای تست شده کار نکرد
