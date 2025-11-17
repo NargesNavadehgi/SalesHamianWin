@@ -25,7 +25,7 @@ namespace SalesHamianWin.Services
             {
                 await connection.OpenAsync();
 
-                // اضافه کردن event handler برای دریافت پیام‌ها
+               
                 connection.InfoMessage += (sender, e) =>
                 {
                     foreach (SqlError error in e.Errors)
@@ -130,11 +130,11 @@ declare @CustCtgrRef int
 declare @CustActRef int 
 declare @AreaRef int 
 
--- شروع تراکنش برای امنیت
+
 BEGIN TRANSACTION
 
 BEGIN TRY
-    -- تعریف Cursor برای خواندن رکوردها از جدول مبدا
+   
     DECLARE customer_cursor CURSOR LOCAL FOR 
     SELECT 
         ID,
@@ -157,13 +157,13 @@ BEGIN TRY
     OPEN customer_cursor
     FETCH NEXT FROM customer_cursor INTO @SourceId, @CustomerName,@CustCode, @StateName, @AreaName, @CustCtgrName,@CustCtgrRef,@CustActRef,@AreaRef, @CustActName, @CustLevelName
 
-    -- حلقه برای پردازش هر رکورد
+   
     WHILE @@FETCH_STATUS = 0
     BEGIN
-        -- گرفتن NewId از SP برای هر رکورد
+      
         EXEC gnr.uspGetNextId 'gnr.tblCust', @NewId OUTPUT
 
-        -- گرفتن CustCode از SP برای هر رکورد
+       
         EXEC GNR.UspGenCustCode 
             @DC = 3, -- DCRef  --- تهران بوران
             @CC = @CustCtgrRef,--CustCtgrRef
@@ -175,7 +175,7 @@ BEGIN TRY
             @RP = NULL,
             @GeneratedCode = @NewCustCode OUTPUT
 
-        -- درج رکورد با مقادیر تولید شده
+        
         INSERT INTO [GNR].[tblCust] (
             [ID],
             [CustCode],
@@ -285,8 +285,8 @@ BEGIN TRY
             [IsMergeRetSaleMoadian]
         )
         VALUES (
-            @NewId,  -- ID تولید شده از SP
-            @NewCustCode,  -- CustCode تولید شده از SP
+            @NewId,  
+            @NewCustCode,  
             @CustomerName,  -- [FirstName]
             @CustomerName,  -- [LastName]  
             @CustomerName,  -- [RealName]
@@ -393,15 +393,15 @@ BEGIN TRY
             0  -- [IsMergeRetSaleMoadian]
         )
 
-        -- خواندن رکورد بعدی
+       
         FETCH NEXT FROM customer_cursor INTO @SourceId, @CustomerName,@CustCode, @StateName, @AreaName, @CustCtgrName,@CustCtgrRef,@CustActRef,@AreaRef, @CustActName, @CustLevelName
     END
 
-    -- بستن Cursor
+    
     CLOSE customer_cursor
     DEALLOCATE customer_cursor
 
-    -- تایید تراکنش
+    
     COMMIT TRANSACTION
     PRINT 'تمام رکوردها با موفقیت درج شدند'
 
@@ -1122,7 +1122,7 @@ enable trigger [Trg_tblSaleItm_UpdateStockGoods] on [SLE].[tblSaleItm]
 
 
 
-        // 🆕 متد عمومی برای اجرای اسکریپت SQL
+
         // 🆕 متد عمومی برای اجرای اسکریپت SQL (روی دیتابیس مقصد)
         public async Task ExecuteSqlScript(string script)
         {
@@ -1160,7 +1160,7 @@ enable trigger [Trg_tblSaleItm_UpdateStockGoods] on [SLE].[tblSaleItm]
             }
         }
 
-        // 🆕 متد برای اجرای کوئری و بازگشت نتیجه
+
         // 🆕 متد برای اجرای کوئری و بازگشت نتیجه (روی دیتابیس مقصد)
         public async Task<DataTable> ExecuteQuery(string query)
         {
@@ -1179,7 +1179,7 @@ enable trigger [Trg_tblSaleItm_UpdateStockGoods] on [SLE].[tblSaleItm]
             }
         }
 
-        // 🆕 متد برای اجرای کوئری و بازگشت تعداد رکوردهای تأثیرپذیرفته
+
         // 🆕 متد برای اجرای کوئری و بازگشت تعداد رکوردهای تأثیرپذیرفته (روی دیتابیس مقصد)
         public async Task<int> ExecuteNonQuery(string query)
         {
