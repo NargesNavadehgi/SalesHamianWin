@@ -24,7 +24,7 @@ namespace SalesHamianWin.Services
         {
             try
             {
-                // اصلاح URL - حذف اسلاش اضافه
+            
                 const string BaseUrl = "http://xx/api/ThirdPartySaleInfoDetailAPI/GetSaleInfoDetails";
 
                 var parameters = new Dictionary<string, string>
@@ -69,8 +69,8 @@ namespace SalesHamianWin.Services
         {
             { "fromDate", fromDate },
             { "toDate", toDate },
-            { "appuserId", "570000013" },
-            { "appUserName", "HPNI" }
+            { "appuserId", "xx" },
+            { "appUserName", "xx" }
         };
 
                 var queryString = string.Join("&", parameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
@@ -84,7 +84,7 @@ namespace SalesHamianWin.Services
             }
             catch (Exception ex)
             {
-                // مدیریت خطاها
+                
                 throw;
             }
         }
